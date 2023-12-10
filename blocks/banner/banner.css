@@ -1,0 +1,23 @@
+.banner-container {
+    padding-bottom: 400px;
+}
+
+.banner.block > div{
+    display: flex;
+    justify-content: center;
+}
+
+.banner.block > div > div:first-child{
+    position: absolute;
+    text-align: center;
+    z-index: 2;
+}
+
+.banner.block > div > div:nth-child(2){
+    position: absolute;
+    text-align: center;
+    z-index: 1;
+}
+
+
+
