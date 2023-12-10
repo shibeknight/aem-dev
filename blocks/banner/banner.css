@@ -1,23 +1,42 @@
-.banner-container {
-    padding-bottom: 400px;
+.banner-wrapper {
+  padding-bottom: 50vh;
 }
 
-.banner.block > div{
-    display: flex;
-    justify-content: center;
+.banner.block > div {
+  display: flex;
+  justify-content: center;
 }
 
-.banner.block > div > div:first-child{
-    position: absolute;
-    text-align: center;
-    z-index: 2;
+.banner.block > div > div:first-child {
+  position: absolute;
+  text-align: center;
+  z-index: 2;
+  background-color: rgba(64, 64, 65, 0.85);
+  border: solid red;
+  width: 100%;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 40vh;
 }
 
-.banner.block > div > div:nth-child(2){
-    position: absolute;
-    text-align: center;
-    z-index: 1;
+.banner.block > div > div:nth-child(2) {
+  position: absolute;
+  text-align: center;
+  z-index: 1;
 }
 
+.new-button {
+  background-color: #ffffff;
+  color: #404041 !important;
+  border-radius: 0;
+  padding: 18px 23px;
+  text-decoration: none;
+}
 
-
+.new-button:hover {
+  text-decoration: none;
+  color: inherit;
+}

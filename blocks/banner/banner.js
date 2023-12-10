@@ -1,25 +1,18 @@
 import { createOptimizedPicture } from "../../scripts/aem.js";
 
 export default function decorate(block) {
-  const items = [...block.firstElementChild.children];
-  console.log('items in block ', items)
-  const bannerImgDiv = document.querySelector('.banner picture');
-  console.log('banner img ', bannerImgDiv)
-  //   const cols = [...block.firstElementChild.children];
-  //   block.classList.add(`columns-${cols.length}-cols`);
+  
+  const button = block.querySelector('.button-container > a');
+  const textDiv = block.querySelector('.banner.block > div > div:first-child')
+  const imgDiv = block.querySelector('.banner.block > div > div:nth-child(2)')
+  console.log('img div ', imgDiv)
+  console.log('button ', button)
+  if(imgDiv.innerHTML === '') {
+    console.log('div has no image')
+    textDiv.style.backgroundColor = 'rgba(64, 64, 65, 1)'
 
-  //   // setup image columns
-  //   [...block.children].forEach((row) => {
-  //     [...row.children].forEach((col) => {
-  //       const pic = col.querySelector("picture");
-  //       if (pic) {
-  //         const picWrapper = pic.closest("div");
-  //         if (picWrapper && picWrapper.children.length === 1) {
-  //           // picture is only content in column
-  //           picWrapper.classList.add("columns-img-col");
-  //         }
-  //       }
-  //     });
-  //   });
+  }
+  button.classList = ' new-button'
+  
   console.log("block is here ", block);
 }
