@@ -12,20 +12,26 @@ export default function decorate(block) {
   const button = block.querySelector(".button-container > a");
   const textDiv = block.querySelector(".banner.block > div > div:first-child");
   const imgDiv = block.querySelector(".banner.block > div > div:nth-child(2)");
-  console.log("text div ", textDiv);
-  console.log("img div ", imgDiv);
-  console.log("button ", button);
+  console.log("text div ?", textDiv);
   //handle no image
   if (imgDiv.innerHTML === "") {
     console.log("div has no image");
     textDiv.style.backgroundColor = "rgba(64, 64, 65, 1)";
   }
   //handle quote
-
   if (textDiv.firstElementChild.innerHTML.toLowerCase() === "quote") {
+    textDiv.classList.add("quote-block")
     textDiv.firstElementChild.innerHTML = svgCode;
   }
-  button.classList = " new-button";
+  //handle image resize?
+  if (imgDiv.innerHTML !== "") {
+    const pictureEl = imgDiv.firstElementChild;
+    const imgEl = pictureEl.lastElementChild;
+    pictureEl.replaceWith(createOptimizedPicture(imgEl.src, imgEl.alt, false, [{ media: "(min-width: 1440px)", width: "2000" }]));
+  }
+  if (button) {
+    button.classList = "new-button";
+  }
 
   console.log("block is here ", block);
 }
