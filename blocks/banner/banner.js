@@ -12,7 +12,6 @@ export default function decorate(block) {
   const button = block.querySelector(".button-container > a");
   const textDiv = block.querySelector(".banner.block > div > div:first-child");
   const imgDiv = block.querySelector(".banner.block > div > div:nth-child(2)");
-  console.log("text div ?", textDiv);
   //handle no image
   if (imgDiv.innerHTML === "") {
     console.log("div has no image");
@@ -21,9 +20,10 @@ export default function decorate(block) {
   //handle quote
   if (textDiv.firstElementChild.innerHTML.toLowerCase() === "quote") {
     textDiv.classList.add("quote-block")
+    block.parentElement.classList.add("quote-wrapper")
     textDiv.firstElementChild.innerHTML = svgCode;
   }
-  //handle image resize?
+  //handle image
   if (imgDiv.innerHTML !== "") {
     const pictureEl = imgDiv.firstElementChild;
     const imgEl = pictureEl.lastElementChild;

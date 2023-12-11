@@ -7,6 +7,7 @@
   justify-content: center;
 }
 
+/* text div */
 .banner.block > div > div:first-child {
   position: absolute;
   text-align: center;
@@ -22,13 +23,26 @@
   height: 392px;
   padding: 10px;
 }
-
+/* picture div */
 .banner.block > div > div:nth-child(2) {
   position: absolute;
   text-align: center;
   z-index: 1;
   height: 392px;
   padding: 10px;
+}
+
+/* picture  */
+.banner.block > div > div:nth-child(2) > picture {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* picture  quote*/
+.picture-quote {
+  top: 75% !important;
 }
 
 .new-button {
@@ -44,11 +58,15 @@
   color: inherit;
 }
 
+.quote-wrapper {
+  padding-bottom: 70vh !important;
+}
+
 .quote-svg {
   background-image: url("./icon_formatQuote_.svg");
 }
 
-@media only screen and (max-width: 360px) {
+@media only screen and (min-width: 360px) {
   .banner-wrapper {
     padding-bottom: 60vh;
   }
@@ -68,26 +86,58 @@
   .banner.block > div > div:first-child > p > a {
     font-size: 14px;
   }
+
+  .banner.block > div > div:nth-child(2) > picture > img {
+    max-width: 360px;
+  }
 }
 
 @media only screen and (min-width: 600px) {
-    .banner-wrapper {
-      padding-bottom: 50vh;
-    }
-    /* .banner.block > div > div:first-child {
+  .banner-wrapper {
+    padding-bottom: 50vh;
+  }
+  /* .banner.block > div > div:first-child {
       height: 552px;
     } */
-    .quote-block {
-      height: 512px !important;
-    }
-    .banner.block > div > div:first-child > h3 {
-      font-size: 45px;
-    }
-    .banner.block > div > div:first-child > p {
-      font-size: 18px;
-    }
-  
-    .banner.block > div > div:first-child > p > a {
-      font-size: 14px;
-    }
+  .quote-block {
+    height: 512px !important;
   }
+  .banner.block > div > div:first-child > h3 {
+    font-size: 45px;
+  }
+  .banner.block > div > div:first-child > p {
+    font-size: 18px;
+  }
+
+  .banner.block > div > div:first-child > p > a {
+    font-size: 14px;
+  }
+
+  .banner.block > div > div:nth-child(2) > picture > img {
+    max-width: 600px;
+  }
+}
+
+@media only screen and (min-width: 860px) {
+  .banner.block > div > div:nth-child(2) > picture > img {
+    max-width: 860px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .banner.block > div > div:nth-child(2) > picture > img {
+    max-width: 1024px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .banner.block > div > div:nth-child(2) > picture > img {
+    max-width: 1280px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .banner.block > div > div:nth-child(2) > picture > img {
+    max-width: 1440px;
+  }
+}
