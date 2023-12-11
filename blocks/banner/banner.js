@@ -19,8 +19,8 @@ export default function decorate(block) {
   }
   //handle quote
   if (textDiv.firstElementChild.innerHTML.toLowerCase() === "quote") {
-    textDiv.classList.add("quote-block")
-    block.parentElement.classList.add("quote-wrapper")
+    textDiv.classList.add("quote-block");
+    block.parentElement.classList.add("quote-wrapper");
     textDiv.firstElementChild.innerHTML = svgCode;
   }
   //handle image
@@ -32,6 +32,4 @@ export default function decorate(block) {
   if (button) {
     button.classList = "new-button";
   }
-
-  console.log("block is here ", block);
 }
